@@ -84,7 +84,7 @@ namespace USBViewer
                     card.lblName.Text = udevKey.GetValue("FriendlyName").ToString();
                     card.lblClass.Text = udevKey.GetValue("Class")?.ToString();
                     card.lblService.Text = udevKey.GetValue("Service").ToString();
-                    card.lblClassGUID.Text = udevKey.GetValue("ClassGUID").ToString();
+                    card.lblClassGUID.Text = udevKey.GetValue("ClassGUID")?.ToString();
                     card.lblDriver.Text = udevKey.GetValue("Driver").ToString();
                     card.lblHID.Text = hid;
                     card.lblDevInstId.Text = $"USBSTOR\\{utype}\\{udev}";
