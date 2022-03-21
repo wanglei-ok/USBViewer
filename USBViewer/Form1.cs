@@ -127,20 +127,18 @@ namespace USBViewer
 
         private void eraserAll_Click(object sender, EventArgs e)
         {
-
-            AllCard.All(card => {
+            foreach (var card in AllCard)
+            {
                 removeCard(card);
-                return true;
-            });
+            }
         }
 
         private void eraserSelected_Click(object sender, EventArgs e)
         {
-            
-            SelectedCard.Any(card => {
+            foreach( var card in SelectedCard)
+            {
                 removeCard(card);
-                return true;
-            });
+            }
         }
 
         private void tsbEraser_ButtonClick(object sender, EventArgs e)
